@@ -11,14 +11,11 @@ app.use(express.json());
 
 app.use(routes);
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/socialNetworkDB', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/socialNetworkApiDB');
 
 app.listen(PORT, () => console.log(`🌍 Connected on localhost:${PORT}`));
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/socialNetworkDB', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/socialNetworkApiDB', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(() => console.log('MongoDB Connected'))

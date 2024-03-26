@@ -1,17 +1,12 @@
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/socialNetworkApiDB';
+// const db = mongoose.connection;
 
-mongoose.connect(MONGODB_URI, {
-  useCreateIndex: true,
-  useFindAndModify: false
-});
+// db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+// db.once('open', () => {
+//   console.log('Connected to MongoDB database');
+// });
 
-const db = mongoose.connection;
+// module.exports = db;
 
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-db.once('open', () => {
-  console.log('Connected to MongoDB database');
-});
-
-module.exports = db;
+//dont think i need this file anymore as i moved the connection to the server.js file
