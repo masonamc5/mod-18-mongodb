@@ -30,13 +30,13 @@ const ThoughtSchema = new Schema({
   createdAt: {
     type: Date,
     default: Date.now,
-   
   },
   username: {
     type: String,
     required: true,
   },
   reactions: [ReactionSchema], 
+}, {
   toJSON: {
     virtuals: true,
     getters: true,
