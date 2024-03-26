@@ -1,7 +1,8 @@
 {
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "seed": "node seed.js"
   },
   "name": "mongodb-challenge",
   "description": "mod 18 mongodb challenge",
